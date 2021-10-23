@@ -26,7 +26,7 @@
 (unless (>= emacs-major-version 24)
   (error "requires Emacs 24 or later."))
 
-(deftheme affbaf "A muted color theme for Emacs")
+(deftheme dehydrated "A muted color theme for Emacs")
 
 (let ((*background*         "#3c4246")
       (*vborder*            "#848484")
@@ -53,7 +53,7 @@
       (*visual-selection*   "#505C63"))
 
   (custom-theme-set-faces
-   'affbaf
+   'dehydrated
 
    `(bold ((t (:bold t))))
    `(button ((t (:foreground, *keywords* :underline t))))
@@ -121,7 +121,7 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'affbaf)
+(provide-theme 'dehydrated)
 
 ;; Local Variables:
 ;; no-byte-compile: t
