@@ -11,28 +11,35 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-;; ----------------------------
+;; -------------------------------
 ;;
-;; AFFBAF: A muted color theme
+;; Dehydrated: A muted color theme
 ;;
-;; ----------------------------
+;; -------------------------------
 ;;
 ;; This is a fork of the 'odersky' theme from this GitHub repo:
 ;; https://github.com/owainlewis/emacs-color-themes
-;; 
-;; It takes its name from the color code of the muted green color that
-;; it added to the scheme.
 
 (unless (>= emacs-major-version 24)
   (error "requires Emacs 24 or later."))
 
 (deftheme dehydrated "A muted color theme for Emacs")
 
-(let ((*background*         "#3c4246")
+(let (
+      (*weak-cyan*      "#a7dbd8")
+      (*strong-cyan*    "#7dd5e7")
+      (*weak-orange*    "#ffd2a7")
+      (*strong-orange*  "#ffb293")
+      (*green*          "#bcfcbc")
+      (*beige*          "#e0e4cc")
+      (*yellow*         "#fffbb7")
+      (*pink*           "#ffc0cb")
+
+      (*background*         "#3c4246")
       (*vborder*            "#848484")
       (*gutter*             "#3E3E3E")
       (*comments*           "#999999")
-      (*constant*           "#affbaf")
+      (*constant*           "#bcfcbc")
       (*current-line*       "#434c5e")
       (*cursor-underscore*  "#FFFAAA")
       (*keywords*           "#A7DBD8")
@@ -44,12 +51,13 @@
       (*mode-inactive-bg*   "#2E3336")
       (*mode-inactive-fg*   "#F8F8F2")
       (*normal*             "#DEDEDE")
-      (*number*             "#2EBF7E")
-      (*operators*          "#69D2E7")
+      (*darkgreen*          "#56c593")
+      (*number*             "#fffbb7")
+      (*operators*          "#7dd5e7")
       (*warning*            "#ffa07a")
       (*regexp*             "#ffa07a")
-      (*string*             "#E0E4CC")
-      (*variable*           "#ffa07a")
+      (*string*             "#e0e4cc")
+      (*variable*           "#ffb293")
       (*visual-selection*   "#505C63"))
 
   (custom-theme-set-faces
@@ -61,6 +69,7 @@
    `(header-line ((t (:background, *mode-line-bg* :foreground, *normal*)))) ;; info header
    `(highlight ((t (:background, *current-line*))))
    `(highlight-face ((t (:background, *current-line*))))
+   `(highlight-numbers-number ((t (:foreground, *number*))))
    `(hl-line ((t (:background, *current-line*))))
    `(info-xref ((t (:foreground, *keywords* :underline t))))
    `(region ((t (:background, *visual-selection*))))
@@ -88,8 +97,8 @@
 
    ;; GUI
    `(fringe ((t (:background, *gutter*))))
-   ;;`(linum ((t (:background, *line-number-bg*))))
-   `(line-number ((t (:background, *line-number-bg* :foreground, *line-number-fg*))))
+   ;;`(line-number ((t (:background, *line-number-bg* :foreground, *line-number-fg*))))
+   `(line-number ((t (:foreground, *line-number-fg*))))
    `(minibuffer-prompt ((t (:foreground, *variable*))))
    `(mode-line ((t (:background, *mode-line-bg* :foreground, *mode-line-fg*))))
    `(mode-line-inactive ((t (:background, *mode-inactive-bg* :foreground, *mode-inactive-fg*))))
