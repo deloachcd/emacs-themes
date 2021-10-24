@@ -120,6 +120,24 @@
    `(git-gutter:added ((t (:foreground, *green*))))
    `(git-gutter:modified ((t (:foreground, *weak-cyan*))))
    `(git-gutter:deleted ((t (:foreground, *strong-orange*))))
+
+   ;; eshell
+   `(+eshell-prompt-pwd ((t (:foreground, *weak-cyan*))))
+   `(success ((t (:foreground, *green* :weight bold))))
+
+   ;; rainbow delimiters
+   `(rainbow-delimiters-depth-1-face  ((t (:foreground, "grey55"))))
+   `(rainbow-delimiters-depth-2-face  ((t (:foreground, "#93a8c6"))))
+   `(rainbow-delimiters-depth-3-face  ((t (:foreground, "#b0b1a3"))))
+   `(rainbow-delimiters-depth-4-face  ((t (:foreground, "#97b098"))))
+   `(rainbow-delimiters-depth-5-face  ((t (:foreground, "grey55"))))
+   `(rainbow-delimiters-depth-6-face  ((t (:foreground, "#93a8c6"))))
+   `(rainbow-delimiters-depth-7-face  ((t (:foreground, "#b0b1a3"))))
+   `(rainbow-delimiters-depth-8-face  ((t (:foreground, "#97b098"))))
+   `(rainbow-delimiters-depth-9-face  ((t (:foreground, "grey55"))))
+   `(rainbow-delimiters-depth-10-face ((t (:foreground, "#93a8c6"))))
+   `(rainbow-delimiters-depth-11-face ((t (:foreground, "#b0b1a3"))))
+   `(rainbow-delimiters-depth-11-face ((t (:foreground, "#97b098"))))
    ))
 
 ;;;###autoload
