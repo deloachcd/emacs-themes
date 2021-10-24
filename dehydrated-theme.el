@@ -40,8 +40,7 @@
       (*gutter*           "#3e3e3e")
       (*comments*         "#999999")
       (*current-line*     "#434c5e")
-      (*line-number-bg*   "#4e4e4e")
-      (*line-number-fg*   "#797979")
+      (*line-number*      "#797979")
       (*visual-selection* "#505c63")
       (*mode-line-fg*     "#e0e4cc")
       (*mode-inactive-bg* "#2e3336")
@@ -88,8 +87,7 @@
 
    ;; GUI
    `(fringe ((t (:background, *gutter*))))
-   ;;`(line-number ((t (:background, *line-number-bg* :foreground, *line-number-fg*))))
-   `(line-number ((t (:foreground, *line-number-fg*))))
+   `(line-number ((t (:foreground, *line-number*))))
    `(minibuffer-prompt ((t (:foreground, *strong-orange*))))
    `(mode-line ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))
    `(mode-line-inactive ((t (:background, *mode-inactive-bg* :foreground, *mode-inactive-fg*))))
@@ -115,7 +113,10 @@
    `(doom-modeline-evil-visual-state ((t (:foreground, *strong-orange* :weight bold))))
    `(doom-modeline-info ((t (:foreground, *green* :weight bold))))
 
-   ;; modeline theming - look in doom-modeline-core.el to figure these out
+   ;; git gutter
+   `(git-gutter:added ((t (:foreground, *green*))))
+   `(git-gutter:modified ((t (:foreground, *weak-cyan*))))
+   `(git-gutter:deleted ((t (:foreground, *strong-orange*))))
    ))
 
 ;;;###autoload
