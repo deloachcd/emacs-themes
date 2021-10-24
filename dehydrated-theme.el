@@ -19,6 +19,9 @@
 ;;
 ;; This is a fork of the 'odersky' theme from this GitHub repo:
 ;; https://github.com/owainlewis/emacs-color-themes
+;;
+;; GitHub repo where this theme lives:
+;; https://github.com/deloachcd/emacs-themes
 
 (unless (>= emacs-major-version 24)
   (error "requires Emacs 24 or later."))
