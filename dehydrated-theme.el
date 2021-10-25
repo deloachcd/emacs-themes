@@ -43,15 +43,14 @@
       (*gutter*           "#3e3e3e")
       (*comments*         "#999999")
       (*current-line*     "#434c5e")
-      (*line-number*      "#797979")
+      (*line-number*      "#5b6268")
       (*visual-selection* "#505c63")
       (*mode-line-fg*     "#e0e4cc")
       (*mode-inactive-bg* "#2e3336")
       (*mode-inactive-fg* "#f8f8f2")
 
       ;; Don't know if I'll ever use this one...
-      (*darkgreen*          "#56c593")
-      )
+      (*darkgreen*          "#56c593"))
 
   (custom-theme-set-faces
    'dehydrated
@@ -90,7 +89,8 @@
 
    ;; GUI
    `(fringe ((t (:background, *gutter*))))
-   `(line-number ((t (:foreground, *line-number*))))
+   `(line-number ((t (:foreground, "#5b6268"))))
+   `(line-number-current-line ((t (:foreground, *normal* :background, *current-line*))))
    `(minibuffer-prompt ((t (:foreground, *strong-orange*))))
    `(mode-line ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))
    `(mode-line-inactive ((t (:background, *mode-inactive-bg* :foreground, *mode-inactive-fg*))))
