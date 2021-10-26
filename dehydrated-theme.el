@@ -43,7 +43,8 @@
       (*gutter*           "#3e3e3e")
       (*comments*         "#999999")
       (*current-line*     "#434c5e")
-      (*line-number*      "#5b6268")
+      (*line-number-bg*   "#4e4e4e")
+      (*line-number-fg*   "#797979")
       (*visual-selection* "#505c63")
       (*mode-line-fg*     "#e0e4cc")
       (*mode-inactive-bg* "#2e3336")
@@ -89,8 +90,7 @@
 
    ;; GUI
    `(fringe ((t (:background, *gutter*))))
-   `(line-number ((t (:foreground, "#5b6268"))))
-   `(line-number-current-line ((t (:foreground, *normal* :background, *current-line*))))
+   `(line-number ((t (:foreground, *line-number-fg* :background, *line-number-bg*))))
    `(minibuffer-prompt ((t (:foreground, *strong-orange*))))
    `(mode-line ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))
    `(mode-line-inactive ((t (:background, *mode-inactive-bg* :foreground, *mode-inactive-fg*))))
