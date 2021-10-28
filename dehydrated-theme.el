@@ -123,6 +123,9 @@
 
    ;; eshell
    `(+eshell-prompt-pwd ((t (:foreground, *weak-cyan*))))
+   `(eshell-ls-symlink ((t (:foreground, *strong-cyan*))))
+   `(eshell-ls-executable ((t (:foreground, *green*))))
+   `(eshell-ls-archive ((t (:foreground, *pink* :weight bold))))
    `(success ((t (:foreground, *green* :weight bold))))
 
    ;; rainbow delimiters
