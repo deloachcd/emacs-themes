@@ -66,7 +66,9 @@
    `(hl-line ((t (:background, *current-line*))))
    `(info-xref ((t (:foreground, *weak-cyan* :underline t))))
    `(region ((t (:background, *visual-selection*))))
+   `(warning ((t (:foreground, *strong-orange*))))
    `(underline ((nil (:underline t))))
+
 
    ;; font-lock
    `(font-lock-builtin-face ((t (:foreground, *strong-cyan*))))
@@ -188,6 +190,9 @@
    `(diredp-read-priv ((t (:foreground, *weak-cyan*))))
    `(diredp-symlink ((t (:foreground, *weak-cyan*))))
    `(diredp-write-priv ((t (:foreground, *green*))))
+
+   ;; org-mode
+   `(org-headline-done ((t (:foreground, *weak-orange*))))
    ))
 
 ;;;###autoload
