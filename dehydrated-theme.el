@@ -192,7 +192,7 @@
    `(diredp-write-priv ((t (:foreground, *green*))))
 
    ;; org-mode
-   `(org-headline-done ((t (:foreground, *weak-orange*))))
+   `(org-headline-done ((t (:foreground, *beige*))))
    ))
 
 ;;;###autoload
