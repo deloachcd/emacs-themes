@@ -49,6 +49,7 @@
       (*mode-line-fg*     "#e0e4cc")
       (*mode-inactive-bg* "#2e3336")
       (*mode-inactive-fg* "#f8f8f2")
+      (*tab-active-bg*    "#5f6d76")
 
       ;; Don't know if I'll ever use this one...
       (*darkgreen*          "#56c593"))
@@ -68,7 +69,6 @@
    `(region ((t (:background, *visual-selection*))))
    `(warning ((t (:foreground, *strong-orange*))))
    `(underline ((nil (:underline t))))
-
 
    ;; font-lock
    `(font-lock-builtin-face ((t (:foreground, *strong-cyan*))))
@@ -206,7 +206,11 @@
    `(term-color-magenta ((t (:foreground, "#ec93d3"))))
    `(term-color-cyan ((t (:foreground, "#93e0e3"))))
    `(term-color-white ((t (:foreground, "#f6f6f6"))))
-   ))
+
+   ;; tab bar
+   `(tab-bar ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))
+   `(tab-bar-tab ((t (:background, *tab-active-bg* :foreground, *mode-inactive-fg*))))
+   `(tab-bar-tab-inactive ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
