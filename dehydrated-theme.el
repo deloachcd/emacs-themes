@@ -50,6 +50,7 @@
       (*mode-inactive-bg* "#2e3336")
       (*mode-inactive-fg* "#f8f8f2")
       (*tab-active-bg*    "#5f6d76")
+      (*tab-inactive-fg*  "#b3b3b3")
 
       ;; Don't know if I'll ever use this one...
       (*darkgreen*          "#56c593"))
@@ -94,8 +95,12 @@
    `(fringe ((t (:background, *gutter*))))
    `(line-number ((t (:foreground, *line-number-fg* :background, *line-number-bg*))))
    `(minibuffer-prompt ((t (:foreground, *strong-orange*))))
-   `(mode-line ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))
-   `(mode-line-inactive ((t (:background, *mode-inactive-bg* :foreground, *mode-inactive-fg*))))
+   ;;:box, `(:line-width 1 :color, *visual-selection*)
+
+   `(mode-line ((t (:background, *visual-selection* :foreground, *mode-line-fg*
+                                 :box, `(:line-width 3 :color, *visual-selection*)))))
+   `(mode-line-inactive ((t (:background, *mode-inactive-bg* :foreground, *mode-inactive-fg*
+                                          :box, `(:line-width 3 :color, *mode-inactive-bg*)))))
    `(cursor ((t (:background, *yellow*))))
    `(text-cursor ((t (:background, *yellow*))))
    `(vertical-border ((t (:foreground, *vborder*)))) ;; between splits
@@ -208,9 +213,15 @@
    `(term-color-white ((t (:foreground, "#f6f6f6"))))
 
    ;; tab bar
-   `(tab-bar ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))
-   `(tab-bar-tab ((t (:background, *tab-active-bg* :foreground, *mode-inactive-fg*))))
-   `(tab-bar-tab-inactive ((t (:background, *visual-selection* :foreground, *mode-line-fg*))))))
+   `(tab-bar ((t (:background, *visual-selection* :foreground, *mode-line-fg*
+                               :box, `(:line-width 1 :color, *visual-selection*)))))
+   `(tab-bar-tab ((t (:background, *tab-active-bg* :foreground, *mode-line-fg*
+                                   :weight bold
+                                   :box, `(:line-width 1 :color, *tab-active-bg*)))))
+   `(tab-bar-tab-inactive ((t (:background, *visual-selection*
+                               :foreground, *tab-inactive-fg*
+                               :box, `(:line-width 1
+                                       :color, *visual-selection*)))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
